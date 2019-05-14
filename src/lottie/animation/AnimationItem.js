@@ -491,7 +491,7 @@ class AnimationItem extends BaseEvent {
       }
       path = this.assetsPath + imagePath;
     } else {
-      path = this.path;
+      path = this.path.substring(0, this.path.lastIndexOf('/') + 1);
       path += assetData.u ? assetData.u : '';
       path += assetData.p;
     }
